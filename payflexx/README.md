@@ -51,7 +51,7 @@ flutter run
 
 ## 👨‍💻 Author
 
-**Andrei-Silviu Strimbeanu**
+**Wihem Maamer**
 Cybersecurity & Software Engineering
 
 ---
