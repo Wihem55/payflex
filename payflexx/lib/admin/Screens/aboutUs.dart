@@ -1,0 +1,142 @@
+
+// ignore_for_file: file_names
+
+import 'package:flutter/material.dart';
+
+class AboutUsPage extends StatelessWidget {
+  const AboutUsPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Info Page'),
+        backgroundColor: const Color(0xFF171821),
+      ),
+      body: Column(
+        children: [
+          const Expanded(flex: 2, child: _TopPortion()),
+          Expanded(
+            flex: 3,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Text(
+                    "Admin Panel",
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.bold, color: Colors.white),
+                  ),
+                  const SizedBox(height: 16),
+                  // Updated the card style
+                  Card(
+                    margin: const EdgeInsets.symmetric(vertical: 8.0),
+                    elevation: 8.0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0),
+                    ),
+                    child:const  Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Column(
+                        children:  [
+                          Text(
+                            "Welcome to Payflex. This Is the Admin Panel How can I Help You .",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(height: 16),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  const _ProfileInfoRow(),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _ProfileInfoRow extends StatelessWidget {
+  const _ProfileInfoRow({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 80,
+      constraints: const BoxConstraints(maxWidth: 400),
+      child: const Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          // Removed the Posts, Followers, and Following sections
+        ],
+      ),
+    );
+  }
+}
+
+class _TopPortion extends StatelessWidget {
+  const _TopPortion({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      fit: StackFit.expand,
+      children: [
+        Container(
+          margin: const EdgeInsets.only(bottom: 50),
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                  colors: [Color(0xff0043ba), Color(0xff006df1)]),
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(50),
+                bottomRight: Radius.circular(50),
+              )),
+        ),
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: SizedBox(
+            width: 150,
+            height: 150,
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                Container(
+                  decoration: const BoxDecoration(
+                    color: Colors.black,
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image:AssetImage('assets/images/admine.jpg')),
+                  ),
+                ),
+                Positioned(
+                  bottom: 0,
+                  right: 0,
+                  child: CircleAvatar(
+                    radius: 20,
+                    backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+                    child: Container(
+                      margin: const EdgeInsets.all(8.0),
+                      decoration: const BoxDecoration(
+                          color: Colors.green, shape: BoxShape.circle),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        )
+      ],
+    );
+  }
+}

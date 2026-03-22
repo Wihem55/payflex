@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "889533267136",
+    "project_id": "payflexx-70a57",
+    "storage_bucket": "payflexx-70a57.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889533267136:android:bd4c9c056b3ab57681c125",
+        "android_client_info": {
+          "package_name": "com.example.payflexx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPBzLSfCYb1bKt1WLQAL-Pbode2BgTMok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
