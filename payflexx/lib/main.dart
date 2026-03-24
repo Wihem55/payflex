@@ -54,11 +54,7 @@ void main() async {
   Platform.isAndroid
       ? await Firebase.initializeApp(
           options: const FirebaseOptions(
-            apiKey: 'AIzaSyDPBzLSfCYb1bKt1WLQAL-Pbode2BgTMok',
-            appId: '1:889533267136:android:bd4c9c056b3ab57681c125',
-            messagingSenderId: '889533267136',
-            projectId: 'payflexx-70a57',
-            storageBucket: 'gs://payflexx-70a57.appspot.com',
+           // firebase apis
           ),
         )
       : await Firebase.initializeApp();
@@ -67,40 +63,16 @@ void main() async {
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
-  // static void setLocale(BuildContext context, Locale newLocale) {
-  //   print('Changing locale to $newLocale');
-  //   _MyAppState? state = context.findAncestorStateOfType<_MyAppState>();
-  //   if (state != null) {
-  //     state.setLocale(newLocale);
-  //   }
-  // }
+
 
   @override
   State<MyApp> createState() => _MyAppState();
-  // static void setLocale(BuildContext context, Locale newLocale) {
-  //   _MyAppState state = context.findAncestorStateOfType<_MyAppState>()!;
-  //   state.setLocale(newLocale);
-  // }
+
 }
 
 class _MyAppState extends State<MyApp> {
   late UserModel? userModel;
-  // late Locale _locale;
-  // void setLocale(Locale newLocale) {
-  //   setState(() {
-  //     _locale = newLocale;
-  //   });
-  //   MyApp.setLocale(context, newLocale); // Update the locale in MyApp
-  // }
-
-  // Future<void> _getSavedLocale() async {
-  //   final prefs = await SharedPreferences.getInstance();
-  //   final languageCode = prefs.getString('languageCode');
-  //   final countryCode = prefs.getString('countryCode');
-  //   if (languageCode != null && countryCode != null) {
-  //     setLocale(Locale(languageCode, countryCode));
-  //   }
-  // }
+ 
 
   @override
   void initState() {
